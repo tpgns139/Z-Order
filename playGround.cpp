@@ -26,6 +26,8 @@ HRESULT playGround::init()
 
 	SCENEMANAGER->changeScene("¼¿·ºÆ®¾À");
 
+	_item1 =  new item1;
+	_item1->init();
 
 	//_star = new starScene;
 	//_star->init();
@@ -70,6 +72,11 @@ void playGround::render()
 
 	IMAGEMANAGER->findImage("¹è°æ")->render(getMemDC());
 	
+	_item1->render();
+
+
+
+
 	//_currentScene->render();
 	SCENEMANAGER->render();
 	//===================================================
