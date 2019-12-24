@@ -3,7 +3,7 @@
 #include "starScene.h"
 #include "selectScene.h"
 #include "player.h"
-
+#include "Test.h"
 class playGround : public gameNode
 {
 private:
@@ -12,7 +12,7 @@ private:
 	//gameNode* _currentScene;
 
 	player* _player;
-
+	Test* _test;
 public:
 	playGround();
 	~playGround();
