@@ -52,6 +52,9 @@
     <Filter Include="2DGameFramework\button">
       <UniqueIdentifier>{edec0274-25d5-4cd4-9858-73c06504f062}</UniqueIdentifier>
     </Filter>
+    <Filter Include="playGround\item">
+      <UniqueIdentifier>{7cac6223-17cb-42ca-ba49-2c026dbd35cb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -135,6 +138,9 @@
     <ClInclude Include="button.h">
       <Filter>2DGameFramework\button</Filter>
     </ClInclude>
+    <ClInclude Include="item1.h">
+      <Filter>playGround\item</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -202,6 +208,9 @@
     </ClCompile>
     <ClCompile Include="button.cpp">
       <Filter>2DGameFramework\button</Filter>
+    </ClCompile>
+    <ClCompile Include="item1.cpp">
+      <Filter>playGround\item</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
