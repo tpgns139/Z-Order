@@ -1,6 +1,6 @@
 #pragma once
-#include "gameNode.h"
-class item1 : public gameNode
+#include"Object.h"
+class item1 : public Object
 {
 private: 
 	
@@ -16,6 +16,8 @@ public:
 	virtual void update();
 	virtual void render();
 
+	virtual image* getImage() { return _item; }
+	virtual int getTesty() { return _y; }
 
 };
 

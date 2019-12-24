@@ -1,5 +1,5 @@
 #pragma once
-#include "gameNode.h"
+#include"Object.h"
 
 struct testenemy
 {
@@ -8,7 +8,7 @@ struct testenemy
 	image* _img;
 };
 
-class Test : public gameNode
+class Test : public Object
 {
 
 private:
@@ -24,5 +24,8 @@ public:
 	void release();
 	void update();
 	void render();
+
+	virtual int getTesty() { return te.y; }
+	virtual image* getImage() { return te._img; }
 };
 

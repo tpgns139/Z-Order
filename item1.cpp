@@ -31,7 +31,7 @@ void item1::release()
 
 void item1::update()
 {
-
+	
 }
 
 void item1::render()

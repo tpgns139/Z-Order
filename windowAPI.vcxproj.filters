@@ -141,8 +141,14 @@
     <ClInclude Include="item1.h">
       <Filter>playGround\item</Filter>
     </ClInclude>
-    <ClInclude Include="Test.h">
+    <ClInclude Include="player.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>playGround</Filter>
+    </ClInclude>
+    <ClInclude Include="Test.h">
+      <Filter>playGround</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -215,8 +221,14 @@
     <ClCompile Include="item1.cpp">
       <Filter>playGround\item</Filter>
     </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>playGround</Filter>
+    </ClCompile>
     <ClCompile Include="Test.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>playGround</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>playGround</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

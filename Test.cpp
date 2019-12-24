@@ -18,7 +18,7 @@ HRESULT Test::init()
 	te._img = IMAGEMANAGER->addFrameImage("Erik", "¿¡¸¯idle.bmp", 336, 200, 4, 2, true, RGB(255, 0, 255));
 
 	te._img->setX(WINSIZEX / 2);
-	te._img->setY(WINSIZEY / 2);
+	te._img->setY(WINSIZEY / 2+100);
 
 	te.x = te._img->getX();
 	te.y = te._img->getY();

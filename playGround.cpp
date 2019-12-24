@@ -29,14 +29,20 @@ HRESULT playGround::init()
 
 	_item1 =  new item1;
 	_item1->init();
+	_ins.Ypos = _item1->getTesty();
+	_ins.obj = _item1;
+	_allObjYpos.push_back(_ins);
 	_player = new player;
 	_player->init();
+
 	_test = new Test;
 	_test->init();
+	_ins.Ypos = _test->getTesty();
+	_ins.obj = _test;
+	_allObjYpos.push_back(_ins);
 
 	//_star = new starScene;
 	//_star->init();
-
 	//_select = new selectScene;
 	//_select->init();
 
@@ -61,8 +67,14 @@ void playGround::update()
 	//if (KEYMANAGER->isOnceKeyDown(VK_F1)) _currentScene = _select;
 	//if (KEYMANAGER->isOnceKeyDown(VK_F2)) _currentScene = _star;
 
+	_item1->update();
 
-	
+	for (int i = 0; i < _allObjYpos.size(); i++)
+	{
+		_allObjYpos[i].Ypos = _allObjYpos[i].obj->getTesty();
+	}
+
+	_allObjYpos =bubblesort(_allObjYpos);
 
 	//_currentScene->update();
 
@@ -76,14 +88,13 @@ void playGround::render()
 	//==================================================
 
 	IMAGEMANAGER->findImage("배경")->render(getMemDC());
-	
-	_item1->render();
+	for (int i = _allObjYpos.size()-1; i >=0; i--)
+	{
+		_allObjYpos[i].obj->render();
+	}
 
 
-	//_currentScene->render();
-	
-	_test->render();
-	SCENEMANAGER->render();
+	//SCENEMANAGER->render();
 	//===================================================
 	//딱 말했다
 	_backBuffer->render(getHDC(), 0, 0);
