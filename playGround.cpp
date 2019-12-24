@@ -28,6 +28,10 @@ HRESULT playGround::init()
 
 	_item1 =  new item1;
 	_item1->init();
+	_player = new player;
+	_player->init();
+	_test = new Test;
+	_test->init();
 
 	//_star = new starScene;
 	//_star->init();
@@ -52,7 +56,7 @@ void playGround::release()
 void playGround::update()
 {
 	gameNode::update();
-
+	_test->update();
 	//if (KEYMANAGER->isOnceKeyDown(VK_F1)) _currentScene = _select;
 	//if (KEYMANAGER->isOnceKeyDown(VK_F2)) _currentScene = _star;
 
@@ -75,9 +79,9 @@ void playGround::render()
 	_item1->render();
 
 
-
-
 	//_currentScene->render();
+	
+	_test->render();
 	SCENEMANAGER->render();
 	//===================================================
 	//µü ¸»Çß´Ù

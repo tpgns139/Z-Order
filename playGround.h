@@ -4,7 +4,7 @@
 #include "selectScene.h"
 #include "item1.h"
 #include "player.h"
-
+#include "Test.h"
 class playGround : public gameNode
 {
 private:
@@ -14,7 +14,7 @@ private:
 	item1* _item1;
 
 	player* _player;
-
+	Test* _test;
 public:
 	playGround();
 	~playGround();
