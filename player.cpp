@@ -6,6 +6,9 @@ HRESULT player::init()
 	position.x = WINSIZEX / 2;
 	position.y = WINSIZEY / 2;
 
+	IMAGEMANAGER->addFrameImage("idle", "¿¡¸¯idle.bmp", 0, 0, 336, 200, 4, 2, true, RGB(255, 0, 255));
+
+
 	img = IMAGEMANAGER->findImage("idle");
 
 	rc = RectMake(position.x, position.y,

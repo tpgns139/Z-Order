@@ -26,6 +26,8 @@ HRESULT playGround::init()
 
 	SCENEMANAGER->changeScene("¼¿·ºÆ®¾À");
 
+
+
 	_item1 =  new item1;
 	_item1->init();
 	_player = new player;
