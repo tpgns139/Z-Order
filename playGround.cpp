@@ -19,6 +19,7 @@ HRESULT playGround::init()
 	IMAGEMANAGER->addImage("배경", "우주.bmp", WINSIZEX, WINSIZEY, false, RGB(0, 0, 0));
 	IMAGEMANAGER->addFrameImage("battle", "battle.bmp", 0, 0, 1536, 79, 16, 1, true, RGB(255, 0, 255));
 	IMAGEMANAGER->addFrameImage("버튼", "button.bmp", 0, 0, 122, 62, 1, 2, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addFrameImage("idle", "에릭idle.bmp", 0, 0, 336, 220, 4, 2, true, RGB(255, 0, 255));
 
 
 	SCENEMANAGER->addScene("스타씬", new starScene);

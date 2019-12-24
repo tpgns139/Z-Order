@@ -1,0 +1,10 @@
+diff a/playGround.cpp b/playGround.cpp	(rejected hunks)
+@@ -26,6 +26,8 @@
+ 
+ 	SCENEMANAGER->changeScene("����Ʈ��");
+ 
++
++
+ 	_item1 =  new item1;
+ 	_item1->init();
+ 	_player = new player;
