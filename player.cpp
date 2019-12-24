@@ -8,7 +8,7 @@ HRESULT player::init()
 
 	img = IMAGEMANAGER->findImage("idle");
 
-	rc = RectMakeCenter(position.x, position.y,
+	rc = RectMake(position.x, position.y,
 		IMAGEMANAGER->findImage("idle")->getFrameWidth(),
 		IMAGEMANAGER->findImage("idle")->getFrameHeight());
 

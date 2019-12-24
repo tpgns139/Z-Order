@@ -2,11 +2,8 @@
 #include "gameNode.h"
 #include "starScene.h"
 #include "selectScene.h"
-<<<<<<< HEAD
 #include "item1.h"
-=======
 #include "player.h"
->>>>>>> origin/gunhee
 
 class playGround : public gameNode
 {
