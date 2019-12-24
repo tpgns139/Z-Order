@@ -158,6 +158,7 @@
     <ClInclude Include="imageManager.h" />
     <ClInclude Include="item1.h" />
     <ClInclude Include="keyManager.h" />
+    <ClInclude Include="player.h" />
     <ClInclude Include="playGround.h" />
     <ClInclude Include="progressBar.h" />
     <ClInclude Include="randomFunction.h" />
@@ -187,6 +188,7 @@
     <ClCompile Include="imageManager.cpp" />
     <ClCompile Include="item1.cpp" />
     <ClCompile Include="keyManager.cpp" />
+    <ClCompile Include="player.cpp" />
     <ClCompile Include="playGround.cpp" />
     <ClCompile Include="progressBar.cpp" />
     <ClCompile Include="sceneManager.cpp" />
