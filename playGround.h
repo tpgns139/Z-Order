@@ -2,7 +2,7 @@
 #include "gameNode.h"
 #include "starScene.h"
 #include "selectScene.h"
-
+#include "player.h"
 
 class playGround : public gameNode
 {
@@ -10,6 +10,8 @@ private:
 	//gameNode* _star;
 	//gameNode* _select;
 	//gameNode* _currentScene;
+
+	player* _player;
 
 public:
 	playGround();

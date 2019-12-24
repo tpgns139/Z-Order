@@ -20,11 +20,17 @@ HRESULT playGround::init()
 	IMAGEMANAGER->addFrameImage("battle", "battle.bmp", 0, 0, 1536, 79, 16, 1, true, RGB(255, 0, 255));
 	IMAGEMANAGER->addFrameImage("¹öÆ°", "button.bmp", 0, 0, 122, 62, 1, 2, true, RGB(255, 0, 255));
 
+	IMAGEMANAGER->addFrameImage("idle", "¿¡¸¯idle.bmp", 0, 0, 336, 200, 4, 2, true, RGB(255, 0, 255));
+
 
 	SCENEMANAGER->addScene("½ºÅ¸¾À", new starScene);
 	SCENEMANAGER->addScene("¼¿·ºÆ®¾À", new selectScene);
 
 	SCENEMANAGER->changeScene("¼¿·ºÆ®¾À");
+
+	_player = new player;
+	_player->init();
+	
 
 
 	//_star = new starScene;
@@ -55,7 +61,7 @@ void playGround::update()
 	//if (KEYMANAGER->isOnceKeyDown(VK_F2)) _currentScene = _star;
 
 
-	
+	_player->update();
 
 	//_currentScene->update();
 
@@ -71,6 +77,9 @@ void playGround::render()
 	IMAGEMANAGER->findImage("¹è°æ")->render(getMemDC());
 	
 	//_currentScene->render();
+
+	_player->render();
+
 	SCENEMANAGER->render();
 	//===================================================
 	//µü ¸»Çß´Ù
