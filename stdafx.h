@@ -25,6 +25,7 @@ using namespace std;
 #include "txtData.h"
 #include "soundManager.h"
 #include "sceneManager.h"
+#include"Camera.h"
 
 using namespace SEVENTEEN_UTIL;
 
@@ -33,7 +34,7 @@ using namespace SEVENTEEN_UTIL;
 //=========================================
 
 #define WINNAME (LPCTSTR)(TEXT("SevenTeen Class"))
-#define WINSTARTX 2000
+#define WINSTARTX 50
 #define WINSTARTY 50
 #define WINSIZEX 800
 #define WINSIZEY 600
@@ -47,7 +48,7 @@ using namespace SEVENTEEN_UTIL;
 #define TXTDATA txtData::getSingleton()
 #define SOUNDMANAGER soundManager::getSingleton()
 #define SCENEMANAGER sceneManager::getSingleton()
-
+#define CAMERA		Camera::getSingleton()
 
 #define SAFE_DELETE(p) {if(p) {delete(p); (p)=NULL;}}
 #define SAFE_RELEASE(p) {if(p) {(p)->release(); (p) = NULL;}}

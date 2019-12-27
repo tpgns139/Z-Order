@@ -52,6 +52,15 @@
     <Filter Include="2DGameFramework\button">
       <UniqueIdentifier>{edec0274-25d5-4cd4-9858-73c06504f062}</UniqueIdentifier>
     </Filter>
+    <Filter Include="playGround\Map">
+      <UniqueIdentifier>{ef780a11-11ea-44ed-bd74-069ee958fc2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2DGameFramework\action">
+      <UniqueIdentifier>{6003091e-5aed-40aa-b6db-3bd848513af9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2DGameFramework\Camera">
+      <UniqueIdentifier>{09fcfcde-3684-4d3d-b2ae-df03d33b80b6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -135,6 +144,21 @@
     <ClInclude Include="button.h">
       <Filter>2DGameFramework\button</Filter>
     </ClInclude>
+    <ClInclude Include="MapObj.h">
+      <Filter>playGround\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="MapManager.h">
+      <Filter>playGround\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="action.h">
+      <Filter>2DGameFramework\action</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>2DGameFramework\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene.h">
+      <Filter>playGround</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -202,6 +226,21 @@
     </ClCompile>
     <ClCompile Include="button.cpp">
       <Filter>2DGameFramework\button</Filter>
+    </ClCompile>
+    <ClCompile Include="MapObj.cpp">
+      <Filter>playGround\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="MapManager.cpp">
+      <Filter>playGround\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="action.cpp">
+      <Filter>2DGameFramework\action</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>2DGameFramework\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>playGround</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

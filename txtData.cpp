@@ -4,6 +4,7 @@
 
 txtData::txtData()
 {
+	_text = new char;
 }
 
 
@@ -58,17 +59,14 @@ vector<string> txtData::txtLoad(const char* loadFileName)
 {
 	HANDLE file;
 	DWORD read;
-
-	char str[128];
-
 	file = CreateFile(loadFileName, GENERIC_READ, NULL, NULL,
 		OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 
-	ReadFile(file, str, 128, &read, NULL);
+	ReadFile(file, _text, GetFileSize(loadFileName), &read, NULL);
 
 	CloseHandle(file);
 	
-	return charArraySeparation(str);
+	return charArraySeparation(_text);
 }
 
 vector<string> txtData::charArraySeparation(char charArray[])
@@ -76,7 +74,7 @@ vector<string> txtData::charArraySeparation(char charArray[])
 	vector<string> vArray;
 
 	char* temp;
-	const char* separator = ",";	//구분자
+	const char* separator = "\n";	//구분자
 	char* token;
 
 	token = strtok_s(charArray, separator, &temp);
@@ -88,4 +86,10 @@ vector<string> txtData::charArraySeparation(char charArray[])
 	}
 
 	return vArray;
+}
+long txtData::GetFileSize(std::string filename)
+{
+	struct stat stat_buf;
+	int rc = stat(filename.c_str(), &stat_buf);
+	return rc == 0 ? stat_buf.st_size : -1;
 }

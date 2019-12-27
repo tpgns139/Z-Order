@@ -603,6 +603,29 @@ void image::scaleRender(HDC hdc, int destX, int destY, int scaleX, int scaleY)
 	
 }
 
+void image::stretchFrameRender(HDC hdc, int destX, int destY, int width, int height, int currentFrameX, int currentFrameY)
+{
+	//네이버 카페 모두의 게시판에서
+	//Blt로 검색해서 뜨는 글 잘 읽어보길 바람
+	//그런다음 이걸 이용해서 프레임렌더나 편의상 필요한 렌더방식을 만들어서 사용하길 바람
+
+	SetStretchBltMode(getMemDC(), COLORONCOLOR);
+
+	//화면에 뿌려줄때 특정 픽셀값을 빼고 출력해준다
+	TransparentBlt(
+		hdc,					//복사될 영역의 DC 
+		destX,					//복사될 좌표 X
+		destY,					//복사될 좌표 Y
+		width,		//복사될 크기
+		height,		//복사될 크기
+		_imageInfo->hMemDC,		//복사할 DC
+		currentFrameX * _imageInfo->frameWidth,
+		currentFrameY * _imageInfo->frameHeight,				//복사해올 좌표
+		_imageInfo->frameWidth,		//복사해올 크기
+		_imageInfo->frameHeight,
+		_transColor);			//복사해올때 제외할 칼라
+}
+
 void image::aniRender(HDC hdc, int destX, int destY, animation * ani)
 {
 	render(hdc, destX, destY, ani->getFramePos().x, ani->getFramePos().y, ani->getFrameWidth(), ani->getFrameHeight());

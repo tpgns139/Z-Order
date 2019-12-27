@@ -147,16 +147,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="action.h" />
     <ClInclude Include="animation.h" />
     <ClInclude Include="battle.h" />
     <ClInclude Include="button.h" />
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="commonMacroFunction.h" />
     <ClInclude Include="effect.h" />
     <ClInclude Include="effectManager.h" />
     <ClInclude Include="gameNode.h" />
+    <ClInclude Include="GameScene.h" />
     <ClInclude Include="image.h" />
     <ClInclude Include="imageManager.h" />
     <ClInclude Include="keyManager.h" />
+    <ClInclude Include="MapManager.h" />
+    <ClInclude Include="MapObj.h" />
     <ClInclude Include="playGround.h" />
     <ClInclude Include="progressBar.h" />
     <ClInclude Include="randomFunction.h" />
@@ -176,15 +181,20 @@
     <ClInclude Include="windowAPI.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="action.cpp" />
     <ClCompile Include="animation.cpp" />
     <ClCompile Include="battle.cpp" />
     <ClCompile Include="button.cpp" />
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="effect.cpp" />
     <ClCompile Include="effectManager.cpp" />
     <ClCompile Include="gameNode.cpp" />
+    <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="image.cpp" />
     <ClCompile Include="imageManager.cpp" />
     <ClCompile Include="keyManager.cpp" />
+    <ClCompile Include="MapManager.cpp" />
+    <ClCompile Include="MapObj.cpp" />
     <ClCompile Include="playGround.cpp" />
     <ClCompile Include="progressBar.cpp" />
     <ClCompile Include="sceneManager.cpp" />

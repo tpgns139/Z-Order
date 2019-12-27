@@ -101,7 +101,8 @@ public:
 	//알파 렌더(뿌려질DC, left, top, 알파값 0 ~ 255)
 	void alphaRender(HDC hdc, int destX, int destY, BYTE alpha);
 
-	void scaleRender(HDC, int destX, int destY, int scaleX, int scaleY);
+	void scaleRender(HDC hdc, int destX, int destY, int scaleX, int scaleY);
+	void stretchFrameRender(HDC hdc, int destX, int destY, int width, int height,int currentFrameX,int currentFrameY);
 
 	void aniRender(HDC hdc, int destX, int destY, animation* ani);
 

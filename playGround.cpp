@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "playGround.h"
-
+#pragma comment(linker, "/entry:WinMainCRTStartup /subsystem:console")
 
 playGround::playGround()
 {
@@ -16,25 +16,10 @@ HRESULT playGround::init()
 {
 	gameNode::init(true);
 
-	IMAGEMANAGER->addImage("¹è°æ", "¿ìÁÖ.bmp", WINSIZEX, WINSIZEY, false, RGB(0, 0, 0));
-	IMAGEMANAGER->addFrameImage("battle", "battle.bmp", 0, 0, 1536, 79, 16, 1, true, RGB(255, 0, 255));
-	IMAGEMANAGER->addFrameImage("¹öÆ°", "button.bmp", 0, 0, 122, 62, 1, 2, true, RGB(255, 0, 255));
 
-
-	SCENEMANAGER->addScene("½ºÅ¸¾À", new starScene);
-	SCENEMANAGER->addScene("¼¿·ºÆ®¾À", new selectScene);
-
-	SCENEMANAGER->changeScene("¼¿·ºÆ®¾À");
-
-
-	//_star = new starScene;
-	//_star->init();
-
-	//_select = new selectScene;
-	//_select->init();
-
-	//_currentScene = _select;
-
+	SCENEMANAGER->addScene("GameScene", new GameScene);
+	SCENEMANAGER->changeScene("GameScene");
+	
 	return S_OK;
 }
 
@@ -42,7 +27,6 @@ HRESULT playGround::init()
 void playGround::release()
 {
 	gameNode::release();
-
 	
 }
 
@@ -50,14 +34,10 @@ void playGround::release()
 void playGround::update()
 {
 	gameNode::update();
-
-	//if (KEYMANAGER->isOnceKeyDown(VK_F1)) _currentScene = _select;
-	//if (KEYMANAGER->isOnceKeyDown(VK_F2)) _currentScene = _star;
-
-
 	
+	CAMERA->update();
 
-	//_currentScene->update();
+	SCENEMANAGER->update();
 
 	SCENEMANAGER->update();
 }
@@ -68,10 +48,14 @@ void playGround::render()
 	PatBlt(getMemDC(), 0, 0, WINSIZEX, WINSIZEY, WHITENESS);
 	//==================================================
 
-	IMAGEMANAGER->findImage("¹è°æ")->render(getMemDC());
-	
-	//_currentScene->render();
+
 	SCENEMANAGER->render();
+	
+	
+
+
+	//_currentScene->render();
+	//SCENEMANAGER->render();
 	//===================================================
 	//µü ¸»Çß´Ù
 	_backBuffer->render(getHDC(), 0, 0);
